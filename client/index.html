@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🖌️ Collaborative Canvas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎨 Collaborative Drawing Board</h1>
+    <p>Draw together in real time — invite a friend to open this page!</p>
+  </header>
+
+  <div id="toolbar">
+    <button id="brushBtn" class="tool-btn active">🖊️ Brush</button>
+    <button id="eraserBtn" class="tool-btn">🧽 Eraser</button>
+
+    <label>
+      🎨 Color:
+      <input type="color" id="colorPicker" value="#000000" />
+    </label>
+
+    <label>
+      🖋️ Size:
+      <input type="range" id="sizeSlider" min="1" max="30" value="5" />
+    </label>
+
+    <button id="undoBtn" class="tool-btn">↩️ Undo</button>
+    <button id="redoBtn" class="tool-btn">↪️ Redo</button>
+    <button id="clearBtn" class="tool-btn danger">🗑️ Clear Board</button>
+  </div>
+
+  <div class="board-container">
+    <canvas id="main-canvas"></canvas>
+  </div>
+
+  <footer>
+    <p>Built with ❤️ using Node.js + Socket.io + Canvas API</p>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="websocket.js"></script>
+  <script src="canvas.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

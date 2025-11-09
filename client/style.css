@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #f2f6ff, #d8e3f0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  margin-top: 10px;
+  color: #2b2b2b;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #ffffffdd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin: 15px 0;
+  gap: 10px;
+  backdrop-filter: blur(6px);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.tool-btn {
+  border: none;
+  background: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tool-btn:hover {
+  background: #d8d8ff;
+  transform: translateY(-1px);
+}
+
+.tool-btn.active {
+  background: #6c63ff;
+  color: white;
+  box-shadow: 0 2px 6px rgba(108, 99, 255, 0.4);
+}
+
+.tool-btn.danger {
+  background: #ff5959;
+  color: white;
+}
+
+.board-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+canvas {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  cursor: crosshair;
+}
+
+footer {
+  margin: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
